@@ -1,0 +1,190 @@
+<div class="chart">
+    <h2 id="page-heading">
+        <span jhiTranslate="chartsApp.chart.home.title">Chart</span>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br />
+
+    <!--
+        TODO
+        https://github.com/swimlane/ngx-charts/blob/master/src/app/app.component.ts
+    -->
+
+    <div class="col">
+        <div class="row">
+            <h3>Options</h3>
+        </div>
+        <div class="row options">
+            Color set: <select style="margin-left: 10px;" [ngModel]="selectedColorScheme"
+                (ngModelChange)="setColorScheme($event)">
+                <option *ngFor="let scheme of colorSets" [value]="scheme.name">{{ scheme.name }}</option>
+            </select>
+        </div>
+
+        <div class="row options">
+            Theme: <select [ngModel]="theme" (ngModelChange)="theme = $event">
+                <option [value]="'dark'">Dark</option>
+                <option [value]="'light'">Light</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div *ngIf="chart.multi" class="col" [class]="theme">
+
+
+        <div class="row">
+            <h3>Area chart stacked</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-area-chart-stacked [view]="view" [scheme]="colorScheme" (select)="select($event)"
+                (activate)="activate($event)" (deactivate)="deactivate($event)" class="chart-container"
+                [results]="chart.multi" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel" [timeline]="timeline">
+            </ngx-charts-area-chart-stacked>
+        </div>
+        <div class="row">
+            <h3>Polar chart</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-polar-chart [view]="view" [scheme]="colorScheme" (select)="select($event)"
+                (activate)="activate($event)" (deactivate)="deactivate($event)" class="chart-container"
+                [results]="chart.multi" [legendTitle]="legend" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" legend="true"
+                gradient="true" xAxis="true" yAxis="true" showGridLines="true" rangeFillOpacity="true"
+                roundDomains="true">
+            </ngx-charts-polar-chart>
+        </div>
+
+        <div class="row">
+            <h3>Heat map</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-heat-map class="chart-container" [min]="heatmapMin" [max]="heatmapMax" [view]="view"
+                [scheme]="colorScheme" [results]="chart.multi" [animations]="animations" [legend]="showLegend"
+                [gradient]="gradient" (legendLabelClick)="onLegendLabelClick($event)" [xAxis]="showXAxis"
+                [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [innerPadding]="innerPadding"
+                [tooltipDisabled]="tooltipDisabled" [trimXAxisTicks]="trimXAxisTicks" [trimYAxisTicks]="trimYAxisTicks"
+                [rotateXAxisTicks]="rotateXAxisTicks" [maxXAxisTickLength]="maxXAxisTickLength"
+                [maxYAxisTickLength]="maxYAxisTickLength" (select)="select($event)" (activate)="activate($event)"
+                (deactivate)="deactivate($event)">
+            </ngx-charts-heat-map>
+
+        </div>
+        <!--
+        <div class="row">
+            <h3>Horizontal stacked bars</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-bar-horizontal-stacked class="chart-container" [view]="view" [scheme]="colorScheme"
+                [schemeType]="schemeType" [results]="chart.multi" [animations]="animations" [gradient]="gradient"
+                [tooltipDisabled]="tooltipDisabled" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+                [legendTitle]="legendTitle" [legendPosition]="legendPosition" [showXAxisLabel]="showXAxisLabel"
+                (legendLabelClick)="onLegendLabelClick($event)" [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [showGridLines]="showGridLines"
+                [barPadding]="barPadding" [roundDomains]="roundDomains" [showDataLabel]="showDataLabel"
+                [xScaleMax]="xScaleMax" [noBarWhenZero]="noBarWhenZero" [trimXAxisTicks]="trimXAxisTicks"
+                [trimYAxisTicks]="trimYAxisTicks" [rotateXAxisTicks]="rotateXAxisTicks"
+                [maxXAxisTickLength]="maxXAxisTickLength" [maxYAxisTickLength]="maxYAxisTickLength"
+                (select)="select($event)" (activate)="activate($event)" (deactivate)="deactivate($event)">
+            </ngx-charts-bar-horizontal-stacked>
+        </div>
+        -->
+    </div>
+
+    <div *ngIf="chart.single" class="col" [class]="theme">
+        <div class="row">
+            <h3>Bar vertical</h3>
+        </div>
+        <div class="row">
+
+            <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" class="chart-container"
+                [results]="chart.single" (select)="select($event)" (activate)="activate($event)"
+                (deactivate)="deactivate($event)" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel">
+            </ngx-charts-bar-vertical>
+        </div>
+        <div class="row">
+            <h3>Advanced pie chart</h3>
+        </div>
+        <div class="row">
+
+            <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" class="chart-container"
+                [results]="chart.single" (select)="select($event)" (activate)="activate($event)"
+                (deactivate)="deactivate($event)" [animations]="animations">
+            </ngx-charts-advanced-pie-chart>
+        </div>
+
+        <div class="row">
+            <h3>Tree Map</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-tree-map class="chart-container" [view]="view" (legendLabelClick)="onLegendLabelClick($event)"
+                [scheme]="colorScheme" [results]="chart.single" [animations]="animations"
+                [tooltipDisabled]="tooltipDisabled" [labelFormatting]="gdpLabelFormatting"
+                [valueFormatting]="currencyFormatting" [gradient]="gradient" (select)="select($event)"
+                (activate)="activate($event)" (deactivate)="deactivate($event)">
+            </ngx-charts-tree-map>
+        </div>
+
+        <div class="row">
+            <h3>Number Map</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-number-card class="chart-container" [view]="view"
+                (legendLabelClick)="onLegendLabelClick($event)" [scheme]="colorScheme" cardColor="#232837"
+                emptyColor="#1e222e" [results]="chart.single" [animations]="animations" (select)="select($event)"
+                (activate)="activate($event)" (deactivate)="deactivate($event)">
+            </ngx-charts-number-card>
+        </div>
+
+        <div class="row">
+            <h3>Gauge</h3>
+        </div>
+        <div class="row">
+            <ngx-charts-gauge class="chart-container" [view]="view" [legend]="showLegend" [legendTitle]="legendTitle"
+                [legendPosition]="legendPosition" [results]="chart.single" [animations]="animations"
+                [textValue]="gaugeTextValue" [scheme]="colorScheme" [min]="gaugeMin" [max]="gaugeMax"
+                [units]="gaugeUnits" [angleSpan]="gaugeAngleSpan" [startAngle]="gaugeStartAngle"
+                [showAxis]="gaugeShowAxis" [bigSegments]="gaugeLargeSegments" [smallSegments]="gaugeSmallSegments"
+                [margin]="margin ? [marginTop, marginRight, marginBottom, marginLeft] : null"
+                [tooltipDisabled]="tooltipDisabled" [showText]="showText" (select)="select($event)"
+                (legendLabelClick)="onLegendLabelClick($event)" (activate)="activate($event)"
+                (deactivate)="deactivate($event)">
+            </ngx-charts-gauge>
+        </div>
+    </div>
+    <div>
+        <div *ngIf="chart.bubble" class="col" [class]="theme">
+            <div class="row">
+                <h3>Bubble Chart</h3>
+            </div>
+            <div class="row">
+                <ngx-charts-bubble-chart class="chart-container"
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [results]="chart.bubble"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [autoScale]="false"
+                    [minRadius]="minRadius"
+                    [maxRadius]="maxRadius"
+                    [trimXAxisTicks]="trimXAxisTicks"
+                    [trimYAxisTicks]="trimYAxisTicks"
+                    [maxXAxisTickLength]="maxXAxisTickLength"
+                    [maxYAxisTickLength]="maxYAxisTickLength"
+                    [xAxisLabel]="xLabelBubble"
+                    [yAxisLabel]="yLabelBubble">
+                </ngx-charts-bubble-chart>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,2 @@
+hello ngx-charts!
+It's dummy.txt
