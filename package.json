@@ -1,17 +1,18 @@
 {
   "name": "generator-jhipster-ngx-charts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Deploy functionnal ngx-charts (Single Entry, Multiple Entry, Bubble Chart)",
   "keywords": [
     "yeoman-generator",
     "jhipster-module",
-    "jhipster-6"
+    "jhipster-6",
+    "ngx-charts"
   ],
   "homepage": "https://github.com/TomSOLVERY/generator-jhipster-ngx-charts",
   "author": {
-    "name": "Tom SOLVERY",
-    "email": "",
-    "url": ""
+    "name": "Contribution Jhipster UGA, Tom SOLVERY (https://github.com/contribution-jhipster-uga)",
+    "email": "contribution.jhipster.uga@gmail.com",
+    "url": "https://github.com/contribution-jhipster-uga"
   },
   "files": [
     "generators"
