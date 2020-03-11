@@ -137,9 +137,37 @@ module.exports = class extends BaseGenerator {
 
             // add entities to menu
 
-            this.addElementToMenu('chart/1', false, this.clientFramework);
-            this.addElementToMenu('chart/2', false, this.clientFramework);
-            this.addElementToMenu('chart/3', false, this.clientFramework);
+            this.rewriteFile(
+                webappDir + 'app/layouts/navbar/navbar.component.html',
+                '<!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->',
+                '            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">' +
+                    '<a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">' +
+                    '<span>' +
+                    '<fa-icon icon="th-list"></fa-icon>' +
+                    '<span jhiTranslate="global.menu.entities.chart">' +
+                    'Chart' +
+                    '</span>' +
+                    '</span>' +
+                    '</a>' +
+                    '<ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">' +
+                    '<li>' +
+                    '<a class="dropdown-item" routerLink="chart/1" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">' +
+                    '<fa-icon icon="asterisk" fixedWidth="true"></fa-icon>' +
+                    '<span>Multiple charts</span>' +
+                    '</li>' +
+                    '<li>' +
+                    '<a class="dropdown-item" routerLink="chart/2" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">' +
+                    '<fa-icon icon="asterisk" fixedWidth="true"></fa-icon>' +
+                    '<span>Single charts</span>' +
+                    '</li>' +
+                    '<li>' +
+                    '<a class="dropdown-item" routerLink="chart/3" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">' +
+                    '<fa-icon icon="asterisk" fixedWidth="true"></fa-icon>' +
+                    '<span>Bubble charts</span>' +
+                    '</li>' +
+                    '</ul>' +
+                    '</li>'
+            );
             this.addEntityToMenu('product', false, this.clientFramework);
 
             // add entity to module
