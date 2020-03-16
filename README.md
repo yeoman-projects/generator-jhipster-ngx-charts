@@ -12,6 +12,8 @@ This is a [JHipster](https://www.jhipster.tech/) module, that is meant to be use
 
 As this is a [JHipster](https://www.jhipster.tech/) module, we expect you have JHipster and its related tools already installed:
 
+This module works only with Angular. (Not React)
+
 - [Installing JHipster](https://www.jhipster.tech/installation/)
 
 # Installation
