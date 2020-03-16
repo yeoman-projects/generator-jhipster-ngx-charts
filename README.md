@@ -82,7 +82,7 @@ Apache-2.0 © [Tom SOLVERY]()
 
 [npm-image]: https://img.shields.io/npm/v/generator-jhipster-ngx-charts.svg
 [npm-url]: https://npmjs.org/package/generator-jhipster-ngx-charts
-[github-actions-image]: https://github.com/TomSOLVERY/generator-jhipster-ngx-charts/workflows/Build/badge.svg
-[github-actions-url]: https://github.com/TomSOLVERY/generator-jhipster-ngx-charts/actions
-[daviddm-image]: https://david-dm.org/TomSOLVERY/generator-jhipster-ngx-charts.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/TomSOLVERY/generator-jhipster-ngx-charts
+[github-actions-image]: https://github.com/contribution-jhipster-uga/generator-jhipster-ngx-charts/workflows/Build/badge.svg
+[github-actions-url]: https://github.com/contribution-jhipster-uga/generator-jhipster-ngx-charts/actions
+[daviddm-image]: https://david-dm.org/contribution-jhipster-uga/generator-jhipster-ngx-charts.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/contribution-jhipster-uga/generator-jhipster-ngx-charts
