@@ -78,7 +78,7 @@ The data's retrieving process works, so you can implement each type of chart ver
 
 # License
 
-Apache-2.0 © [Tom SOLVERY]()
+Apache-2.0 © [Contribution UGA](https://github.com/contribution-jhipster-uga/generator-jhipster-ngx-charts/blob/master/LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/generator-jhipster-ngx-charts.svg
 [npm-url]: https://npmjs.org/package/generator-jhipster-ngx-charts
