@@ -50,7 +50,20 @@ This module allows you to use simple entry, multiple entry charts and bubble cha
 After installation, you will find examples of how to use the charts. 
 The data's retrieving process works, so you can implement each type of chart very easly.
 
-![](https://i.imgur.com/x0ZIJ9o.png)
+# Examples
+## Simple Entry Charts
+![Simple Entry Chart](https://i.imgur.com/NbNpN8W.png)
+![Simple Entry Chart](https://i.imgur.com/TCQsua1.png)
+![Simple Entry Chart](https://i.imgur.com/9G1YPHE.png)
+
+## Multiple Entry Charts
+
+![Multiple Entry Chart](https://i.imgur.com/WTd2TdQ.png)
+![Multiple Entry Chart](https://i.imgur.com/8MFENRG.png)
+
+## Bubble Chart
+
+![Bubble Chart](https://i.imgur.com/Fyi3E9x.png)
 
 # License
 
