@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-ngx-charts",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Deploy functionnal ngx-charts (Single Entry, Multiple Entry, Bubble Chart)",
   "keywords": [
     "yeoman-generator",
