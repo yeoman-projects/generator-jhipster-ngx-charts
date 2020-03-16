@@ -46,6 +46,12 @@ yarn global upgrade generator-jhipster-ngx-charts
 
 # Usage
 
+This module allows you to use simple entry, multiple entry charts and bubble chart directly.
+After installation, you will find examples of how to use the charts. 
+The data's retrieving process works, so you can implement each type of chart very easly.
+
+![](https://i.imgur.com/x0ZIJ9o.png)
+
 # License
 
 Apache-2.0 © [Tom SOLVERY]()
