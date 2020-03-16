@@ -1,3 +1,11 @@
+<div align="center">
+  <a href="https://www.jhipster.tech/">
+    <img src="https://github.com/jhipster/jhipster-artwork/blob/master/logos/JHipster%20RGB-small100x25px.png?raw=true">
+  </a>
+  <a href="https://swimlane.gitbook.io/ngx-charts/">
+    <img width=100px src="https://i.imgur.com/ahJUOIx.png">
+  </a>
+</div>
 # generator-jhipster-ngx-charts
 
 [![NPM version][npm-image]][npm-url] [![Build Status][github-actions-image]][github-actions-url] [![Dependency Status][daviddm-image]][daviddm-url]
