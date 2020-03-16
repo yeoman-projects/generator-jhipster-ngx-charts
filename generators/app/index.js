@@ -144,7 +144,7 @@ module.exports = class extends BaseGenerator {
                     '<a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">' +
                     '<span>' +
                     '<fa-icon icon="th-list"></fa-icon>' +
-                    '<span jhiTranslate="global.menu.entities.chart">' +
+                    '<span>' +
                     'Chart' +
                     '</span>' +
                     '</span>' +
