@@ -6,6 +6,7 @@
     <img width=100px src="https://i.imgur.com/ahJUOIx.png">
   </a>
 </div>
+
 # generator-jhipster-ngx-charts
 
 [![NPM version][npm-image]][npm-url] [![Build Status][github-actions-image]][github-actions-url] [![Dependency Status][daviddm-image]][daviddm-url]
